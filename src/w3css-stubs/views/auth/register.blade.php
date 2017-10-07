@@ -3,7 +3,7 @@
 @section('content')
 <div class="w3-container w3-margin">
     <div class="w3-row">
-        {{-- For offset --}}
+        {{-- Offset-2 --}}
         <div class="w3-col l2 w3-container"></div>
         <div class="w3-col l8">
             <div class="w3-card form-bg">
@@ -70,7 +70,7 @@
                 </div>
             </div>
         </div>
-        {{-- For offset --}}
+        {{-- Offset-2 --}}
         <div class="w3-col l2 w3-container"></div>
     </div>
 </div>

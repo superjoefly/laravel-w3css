@@ -19,7 +19,7 @@
             <div class="w3-container">
                 <div class="w3-large">
                     {{-- Toggle Nav --}}
-                    <span class="w3-bar-item w3-button w3-hover-none w3-right" onclick="document.getElementById('dropDown').classList.toggle('w3-hide'); document.getElementById('logout').classList.add('w3-hide');">&#9776</span>
+                    <span class="w3-bar-item w3-button w3-hover-none w3-right" onclick="toggleNav()">&#9776</span>
 
                     <a class="w3-bar-item w3-button w3-hover-none" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
@@ -35,7 +35,7 @@
                     @else
                         <li>
                             {{-- Toggle Logout --}}
-                            <a href="#" onclick="event.preventDefault();document.getElementById('logout').classList.toggle('w3-hide')">
+                            <a href="#" onclick="toggleLogout()">
                                 {{ Auth::user()->name }} <span>&#9660</span>
                             </a>
                             <ul class="w3-animate-left w3-margin-top w3-hide" id="logout">
@@ -60,5 +60,15 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('dropDown').classList.toggle('w3-hide'); document.getElementById('logout').classList.add('w3-hide');
+        }
+        function toggleLogout() {
+            event.preventDefault();
+            document.getElementById('logout').classList.toggle('w3-hide');
+        }
+    </script>
 </body>
 </html>
