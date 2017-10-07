@@ -7,7 +7,9 @@ Preset for W3css scaffolding on new Laravel 5.5.x project.
 ## Contents
 
 [Installation](#installation)
+
 [Credits](#credits)
+
 [License](#license)
 
 ## Installation
